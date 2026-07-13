@@ -18,7 +18,7 @@ function Stats() {
       </div>
 
       <div className="stat-card">
-        <h2>10/7</h2>
+        <h2>24/7</h2>
         <p>Technical Support</p>
       </div>
 
