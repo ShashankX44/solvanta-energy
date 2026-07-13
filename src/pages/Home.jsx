@@ -1,39 +1,11 @@
 import "../App.css";
 import { Link } from "react-router-dom";
-
+import Navbar from "../components/Navbar";
 function Home() {
   return (
     <div className="hero">
 
-      <nav className="navbar">
-
-        <div className="logo">
-          <span className="logo-icon">☀</span>
-
-          <div className="logo-text">
-            <h2>SOLVANTA</h2>
-            <p>Energy Pvt. Ltd.</p>
-          </div>
-        </div>
-
-        <ul className="menu">
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/solutions">Solutions</Link></li>
-          <li><Link to="/projects">Projects</Link></li>
-          <li><Link to="/calculator">Calculator</Link></li>
-          <li><Link to="/about">About</Link></li>
-          <li><Link to="/contact">Contact</Link></li>
-        </ul>
-
-        <div className="right-nav">
-          <span className="phone">📞 +91-7093132598</span>
-
-          <button className="quote-btn">
-            Get Quote
-          </button>
-        </div>
-
-      </nav>
+      <Navbar />
 
       <section className="hero-content">
 
