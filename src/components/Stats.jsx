@@ -3,7 +3,7 @@ function Stats() {
     <section className="stats-section">
 
       <div className="stat-card">
-        <h2>27+</h2>
+        <h2>0</h2>
         <p>Projects Completed</p>
       </div>
 
@@ -13,7 +13,7 @@ function Stats() {
       </div>
 
       <div className="stat-card">
-        <h2>1 Year</h2>
+        <h2>0 Year</h2>
         <p>Performance Warranty</p>
       </div>
 
