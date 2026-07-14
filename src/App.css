@@ -759,3 +759,323 @@ FAQ V2
     max-width:850px;
 
 }
+/* ===========================
+   PREMIUM CALCULATOR
+=========================== */
+
+.calculator-wrapper{
+    max-width:1100px;
+    margin:100px auto;
+    padding:0 30px;
+}
+
+.calc-title{
+    text-align:center;
+    font-size:54px;
+    margin-bottom:70px;
+    font-weight:700;
+    letter-spacing:-1px;
+}
+
+.calc-step{
+    margin-bottom:70px;
+    animation:fadeUp .5s ease;
+}
+
+.calc-step h3{
+    text-align:center;
+    font-size:28px;
+    margin-bottom:35px;
+    font-weight:600;
+}
+
+.option-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.option-card{
+    background:#fff;
+    border:1px solid #e8e8e8;
+    border-radius:24px;
+    padding:40px 30px;
+    text-align:center;
+    cursor:pointer;
+    transition:.35s;
+    box-shadow:0 10px 30px rgba(0,0,0,.04);
+}
+
+.option-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 20px 45px rgba(0,0,0,.08);
+}
+
+.option-card.active{
+    background:#16a34a;
+    color:#fff;
+    border-color:#16a34a;
+}
+
+.option-card h4{
+    margin-top:18px;
+    margin-bottom:10px;
+    font-size:22px;
+}
+
+.option-card p{
+    color:#777;
+    line-height:28px;
+}
+
+.option-card.active p{
+    color:#fff;
+}
+
+.kw-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+    max-width:700px;
+    margin:auto;
+}
+
+.kw-card{
+    padding:18px;
+    background:#fff;
+    border:1px solid #ddd;
+    border-radius:18px;
+    cursor:pointer;
+    font-size:18px;
+    transition:.3s;
+}
+
+.kw-card:hover{
+    transform:translateY(-3px);
+}
+
+.kw-card.active{
+    background:#16a34a;
+    color:#fff;
+    border-color:#16a34a;
+}
+
+.custom-box{
+    max-width:420px;
+    margin:35px auto 0;
+}
+
+.custom-box input{
+    width:100%;
+    padding:18px;
+    border:1px solid #ddd;
+    border-radius:18px;
+    font-size:18px;
+    outline:none;
+}
+
+.custom-box input:focus{
+    border-color:#16a34a;
+}
+
+.calculate-area{
+    text-align:center;
+    margin-top:70px;
+}
+
+.calculate-btn{
+    padding:20px 60px;
+    border:none;
+    background:#16a34a;
+    color:#fff;
+    font-size:20px;
+    border-radius:50px;
+    cursor:pointer;
+    transition:.35s;
+}
+
+.calculate-btn:hover{
+    transform:translateY(-5px);
+    box-shadow:0 20px 45px rgba(22,163,74,.25);
+}
+
+.fade{
+    animation:fadeUp .45s ease;
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@media(max-width:900px){
+
+.option-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.kw-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.calc-title{
+
+font-size:40px;
+
+}
+
+}
+.calculator-results{
+    max-width:1200px;
+    margin:100px auto;
+    padding:0 30px;
+}
+
+.calculator-results h2{
+    text-align:center;
+    font-size:48px;
+    margin-bottom:60px;
+    font-weight:700;
+}
+
+.results-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+    max-width:1000px;
+    margin:0 auto;
+}
+
+.result-card{
+    background:#fff;
+    border-radius:24px;
+    padding:35px;
+    text-align:center;
+    box-shadow:0 15px 40px rgba(0,0,0,.06);
+    transition:.35s;
+}
+
+.result-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 25px 60px rgba(0,0,0,.10);
+}
+
+.result-card h3{
+    font-size:18px;
+    color:#777;
+    margin-bottom:15px;
+}
+
+.result-card p{
+    font-size:34px;
+    font-weight:700;
+    color:#16a34a;
+}
+
+@media(max-width:900px){
+
+.results-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+gap:20px;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.results-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+.result-icon{
+
+width:60px;
+
+height:60px;
+
+margin:auto;
+
+margin-bottom:20px;
+
+border-radius:18px;
+
+background:#16a34a;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:28px;
+
+color:white;
+
+}
+
+.result-card{
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.result-card::before{
+
+content:"";
+
+position:absolute;
+
+left:0;
+
+top:0;
+
+height:4px;
+
+width:100%;
+
+background:#16a34a;
+
+transform:scaleX(0);
+
+transition:.4s;
+
+}
+
+.result-card:hover::before{
+
+transform:scaleX(1);
+
+}
+
+.result-card:hover{
+
+transform:translateY(-10px);
+
+}

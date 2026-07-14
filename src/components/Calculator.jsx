@@ -16,7 +16,9 @@ function Calculator() {
     const report = calculateSolar(
 
       data.systemType,
+
       data.systemSize,
+
       data.season
 
     );
@@ -38,14 +40,18 @@ function Calculator() {
         </p>
 
         <h1>
+
           Design Your
           <br />
           Solar System
+
         </h1>
 
         <p className="page-description">
+
           Select your solar configuration and instantly
           estimate energy generation for Anantapur.
+
         </p>
 
       </section>
