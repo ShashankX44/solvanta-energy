@@ -1,5 +1,6 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import WhatsAppButton from "../components/WhatsAppButton";
 import { FiZap } from "react-icons/fi";
 
 const projects = [
@@ -109,6 +110,7 @@ function Projects() {
         </div>
 
       </section>
+      <WhatsAppButton />
 
       <Footer />
     </>

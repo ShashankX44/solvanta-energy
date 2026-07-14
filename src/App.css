@@ -1735,3 +1735,289 @@ height:350px;
 }
 
 }
+.menu a{
+
+text-decoration:none;
+
+color:#222;
+
+font-weight:500;
+
+transition:.3s;
+
+position:relative;
+
+padding-bottom:6px;
+
+}
+.menu a:hover{
+
+color:#16a34a;
+
+}
+
+.menu a.active-nav{
+
+color:#1F2937 !important;
+
+font-weight:700;
+
+}
+
+.active-nav::after{
+
+content:"";
+
+position:absolute;
+
+left:0;
+
+bottom:0;
+
+width:100%;
+
+height:2px;
+
+background:#16a34a;
+
+border-radius:30px;
+
+}
+/* =====================================
+   GLOBAL RESPONSIVE FIX
+===================================== */
+
+@media screen and (max-width:768px){
+
+body{
+
+overflow-x:hidden;
+
+}
+
+/* HERO */
+
+.hero{
+
+padding:20px;
+
+min-height:auto;
+
+}
+
+.hero-content{
+
+margin-top:70px;
+
+}
+
+.hero-content h1{
+
+font-size:42px;
+
+line-height:50px;
+
+letter-spacing:-1px;
+
+}
+
+.description{
+
+font-size:18px;
+
+line-height:30px;
+
+margin:30px auto;
+
+}
+
+.hero-buttons{
+
+flex-direction:column;
+
+gap:15px;
+
+}
+
+.primary-btn,
+.secondary-btn{
+
+width:100%;
+
+text-align:center;
+
+}
+
+/* NAVBAR */
+
+.navbar{
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+.menu{
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+gap:18px;
+
+}
+
+.right-nav{
+
+flex-direction:column;
+
+gap:15px;
+
+}
+
+/* PAGE HERO */
+
+.page-hero{
+
+padding:0 20px;
+
+margin:70px auto 50px;
+
+}
+
+.page-hero h1{
+
+font-size:42px;
+
+line-height:50px;
+
+}
+
+.page-description{
+
+font-size:18px;
+
+line-height:30px;
+
+}
+
+/* GRID SECTIONS */
+
+.services-grid,
+.why-grid,
+.projects-grid,
+.values-grid,
+.results-grid,
+.solutions-grid-page{
+
+grid-template-columns:1fr;
+
+}
+
+/* TIMELINE */
+
+.timeline{
+
+flex-direction:column;
+
+align-items:center;
+
+gap:40px;
+
+}
+
+.timeline::before{
+
+display:none;
+
+}
+
+/* ABOUT */
+
+.about-story{
+
+grid-template-columns:1fr;
+
+gap:40px;
+
+}
+
+.about-right{
+
+grid-template-columns:1fr;
+
+}
+
+/* CONTACT */
+
+.contact-section{
+
+grid-template-columns:1fr;
+
+}
+
+.contact-form,
+.contact-info{
+
+padding:25px;
+
+}
+
+/* PROJECTS */
+
+.project-card img{
+
+height:220px;
+
+}
+
+/* STATS */
+
+.stats-section{
+
+grid-template-columns:repeat(2,1fr);
+
+padding:0 20px;
+
+}
+
+/* FOOTER */
+
+.footer{
+
+padding:50px 25px;
+
+}
+
+.footer-top{
+
+flex-direction:column;
+
+gap:40px;
+
+}
+
+.footer-links{
+
+flex-direction:column;
+
+gap:30px;
+
+}
+
+/* TITLES */
+
+.services-section h2,
+.why-section h2,
+.values-section h2,
+.process-section h2,
+.calculator-results h2{
+
+font-size:36px;
+
+line-height:46px;
+
+}
+
+}

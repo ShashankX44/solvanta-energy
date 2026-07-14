@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 function Navbar() {
   return (
@@ -14,12 +14,74 @@ function Navbar() {
       </div>
 
       <ul className="menu">
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/solutions">Solutions</Link></li>
-        <li><Link to="/projects">Projects</Link></li>
-        <li><Link to="/calculator">Calculator</Link></li>
-        <li><Link to="/about">About</Link></li>
-        <li><Link to="/contact">Contact</Link></li>
+
+        <li>
+          <NavLink
+            to="/"
+            end
+            className={({ isActive }) =>
+              isActive ? "active-nav" : undefined
+            }
+          >
+            Home
+          </NavLink>
+        </li>
+
+        <li>
+          <NavLink
+            to="/solutions"
+            className={({ isActive }) =>
+              isActive ? "active-nav" : undefined
+            }
+          >
+            Solutions
+          </NavLink>
+        </li>
+
+        <li>
+          <NavLink
+            to="/projects"
+            className={({ isActive }) =>
+              isActive ? "active-nav" : undefined
+            }
+          >
+            Projects
+          </NavLink>
+        </li>
+
+        <li>
+          <NavLink
+            to="/calculator"
+            className={({ isActive }) =>
+              isActive ? "active-nav" : undefined
+            }
+          >
+            Calculator
+          </NavLink>
+        </li>
+
+        <li>
+          <NavLink
+            to="/about"
+            className={({ isActive }) =>
+              isActive ? "active-nav" : undefined
+            }
+          >
+            About
+          </NavLink>
+        </li>
+
+        <li>
+          <NavLink
+            to="/contact"
+            className={({ isActive }) =>
+              isActive ? "active-nav" : undefined
+            }
+          >
+            Contact
+          </NavLink>
+        </li>
+
       </ul>
 
       <div className="right-nav">

@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import InstallationProcess from "../components/InstallationProcess";
 import FAQ from "../components/FAQ";
+import WhatsAppButton from "../components/WhatsAppButton";
 import {
   FiHome,
   FiBriefcase,
@@ -134,7 +135,7 @@ function Solutions() {
 
       <InstallationProcess />
       <FAQ />
-
+        <WhatsAppButton />
       <Footer />
 
     </>

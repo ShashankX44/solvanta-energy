@@ -8,6 +8,7 @@ import WhyChoose from "../components/WhyChoose";
 import ProjectsPreview from "../components/ProjectsPreview";
 import CTA from "../components/CTA";
 import Footer from "../components/Footer";
+import WhatsAppButton from "../components/WhatsAppButton";
 function Home() {
   return (
     <div className="hero">
@@ -25,6 +26,7 @@ function Home() {
       <ProjectsPreview />
 
       <CTA />
+      <WhatsAppButton />
 
       <Footer />
 

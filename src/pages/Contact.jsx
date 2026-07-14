@@ -1,5 +1,6 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import WhatsAppButton from "../components/WhatsAppButton";
 import {
   FiPhone,
   FiMail,
@@ -166,6 +167,7 @@ function Contact() {
         ></iframe>
 
       </section>
+      <WhatsAppButton />
 
       <Footer />
 

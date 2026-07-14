@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import CalculatorForm from "../components/CalculatorForm";
 import CalculatorResults from "../components/CalculatorResults";
-
+import WhatsAppButton from "../components/WhatsAppButton";
 import { calculateSolar } from "../utils/calculator";
 
 function Calculator() {
@@ -62,6 +62,7 @@ setTimeout(() => {
       <div ref={reportRef}>
   <CalculatorResults result={result} />
 </div>
+<WhatsAppButton />
 
       <Footer />
 
