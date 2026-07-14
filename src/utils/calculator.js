@@ -22,26 +22,58 @@ export function calculateSolar(systemType, systemSize, season) {
 
   return {
 
-    systemType,
+  systemType,
 
-    systemSize,
+  systemSize,
 
-    dailyGeneration:
-      dailyGeneration.toFixed(1),
+  dailyGeneration:
+    dailyGeneration.toFixed(1),
 
-    monthlyGeneration:
-      monthlyGeneration.toFixed(0),
+  monthlyGeneration:
+    monthlyGeneration.toFixed(0),
 
-    yearlyGeneration:
-      yearlyGeneration.toFixed(0),
+  yearlyGeneration:
+    yearlyGeneration.toFixed(0),
 
-    panels,
+  panels,
 
-    roofArea,
+  roofArea,
 
-    inverterEfficiency:
-      solarConfig.inverterEfficiency
+  inverterEfficiency:
+    solarConfig.inverterEfficiency,
 
-  };
+  estimatedCost:
+    Math.round(systemSize * 55000),
+
+  subsidy:
+    systemSize <= 3
+      ? Math.round(systemSize * 30000)
+      : Math.round(90000),
+
+  finalInvestment:
+    Math.round(
+      systemSize * 55000 -
+      (systemSize <= 3
+        ? systemSize * 30000
+        : 90000)
+    ),
+
+  yearlySavings:
+    Math.round(
+      yearlyGeneration * 7
+    ),
+
+  payback:
+    (
+      (
+        systemSize * 55000 -
+        (systemSize <= 3
+          ? systemSize * 30000
+          : 90000)
+      ) /
+      (yearlyGeneration * 7)
+    ).toFixed(1)
+
+};
 
 }
