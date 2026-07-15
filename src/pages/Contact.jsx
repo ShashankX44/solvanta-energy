@@ -1,6 +1,10 @@
+import { useRef } from "react";
+import emailjs from "@emailjs/browser";
+
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import WhatsAppButton from "../components/WhatsAppButton";
+
 import {
   FiPhone,
   FiMail,
@@ -11,10 +15,32 @@ import {
 
 function Contact() {
 
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service44",
+        "template_etlzvrp",
+        form.current,
+        "zLYVMaX2f0jfWC6L8"
+      )
+      .then(
+        () => {
+          alert("✅ Thank you! Your inquiry has been sent successfully.");
+          form.current.reset();
+        },
+        (error) => {
+          alert("❌ Failed to send inquiry. Please try again.");
+          console.log(error.text);
+        }
+      );
+  };
+
   return (
-
     <>
-
       <Navbar />
 
       <section className="page-hero">
@@ -24,19 +50,15 @@ function Contact() {
         </p>
 
         <h1>
-
           Let's Build Your
           <br />
           Solar Future
-
         </h1>
 
         <p className="page-description">
-
           Whether you're planning a residential, commercial or
           industrial solar installation, our team is here to
           help you every step of the way.
-
         </p>
 
       </section>
@@ -45,111 +67,86 @@ function Contact() {
 
         <div className="contact-info">
 
-          <h2>
-
-            Get in Touch
-
-          </h2>
+          <h2>Get in Touch</h2>
 
           <div className="contact-item">
-
             <FiPhone />
-
             <div>
-
               <h4>Phone</h4>
-
-              <p>+91 XXXXX XXXXX</p>
-
+              <p>+91 70931 32598</p>
             </div>
-
           </div>
 
           <div className="contact-item">
-
             <FiMail />
-
             <div>
-
               <h4>Email</h4>
-
-              <p>info@solvantaenergy.com</p>
-
+              <p>x.shashank00@gmail.com</p>
             </div>
-
           </div>
 
           <div className="contact-item">
-
             <FiMapPin />
-
             <div>
-
               <h4>Location</h4>
-
               <p>Anantapur, Andhra Pradesh</p>
-
             </div>
-
           </div>
 
           <div className="contact-item">
-
             <FiClock />
-
             <div>
-
               <h4>Business Hours</h4>
-
               <p>Mon - Sat | 9:00 AM - 6:00 PM</p>
-
             </div>
-
           </div>
 
         </div>
 
         <div className="contact-form">
 
-          <h2>
+          <h2>Request a Free Consultation</h2>
 
-            Request a Free Consultation
-
-          </h2>
-
-          <form>
+          <form ref={form} onSubmit={sendEmail}>
 
             <input
               type="text"
+              name="name"
               placeholder="Full Name"
+              required
             />
 
             <input
               type="email"
+              name="email"
               placeholder="Email Address"
+              required
             />
 
             <input
               type="tel"
+              name="phone"
               placeholder="Phone Number"
+              required
             />
 
             <input
               type="text"
+              name="location"
               placeholder="Location"
+              required
             />
 
             <textarea
               rows="6"
+              name="message"
               placeholder="Tell us about your project..."
+              required
             />
 
-            <button>
-
+            <button type="submit">
               <FiSend />
-
               Send Inquiry
-
             </button>
 
           </form>
@@ -167,14 +164,12 @@ function Contact() {
         ></iframe>
 
       </section>
+
       <WhatsAppButton />
 
       <Footer />
-
     </>
-
   );
-
 }
 
 export default Contact;
