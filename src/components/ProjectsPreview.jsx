@@ -1,26 +1,30 @@
 function ProjectsPreview() {
+
   const projects = [
     {
       title: "Residential Solar",
-      location: "Bangalore",
+      location: "Anantapur",
       capacity: "10 kW"
     },
     {
       title: "Commercial Solar",
-      location: "Hyderabad",
+      location: "Kurnool",
       capacity: "120 kW"
     },
     {
       title: "Industrial Solar",
-      location: "Chennai",
+      location: "Hindupur",
       capacity: "500 kW"
     }
   ];
 
   return (
+
     <section className="projects-section">
 
-      <p className="section-tag">FEATURED PROJECTS</p>
+      <p className="section-tag">
+        FEATURED PROJECTS
+      </p>
 
       <h2>
         Trusted Installations.
@@ -36,27 +40,38 @@ function ProjectsPreview() {
       <div className="projects-grid">
 
         {projects.map((project, index) => (
-          <div className="project-card" key={index}>
 
-            <div className="project-image">
-              Solar Project
-            </div>
+          <div
+            className="project-card"
+            key={index}
+          >
+
+            <div className="project-image"></div>
 
             <div className="project-content">
+
               <h3>{project.title}</h3>
 
-              <p>{project.location}</p>
+              <div className="project-footer">
 
-              <span>{project.capacity}</span>
+                <p>{project.location}</p>
+
+                <span>{project.capacity}</span>
+
+              </div>
+
             </div>
 
           </div>
+
         ))}
 
       </div>
 
     </section>
+
   );
+
 }
 
 export default ProjectsPreview;

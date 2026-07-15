@@ -116,39 +116,39 @@ function About() {
 
         <div className="about-right">
 
-  <div className="about-stat-card">
+          <div className="stat-card">
 
-    <h2>200+</h2>
+            <h2>200+</h2>
 
-    <p>Projects Completed</p>
+            <p>Projects Completed</p>
 
-  </div>
+          </div>
 
-  <div className="about-stat-card">
+          <div className="stat-card">
 
-    <h2>25+</h2>
+            <h2>25+</h2>
 
-    <p>Years Panel Warranty</p>
+            <p>Years Panel Warranty</p>
 
-  </div>
+          </div>
 
-  <div className="about-stat-card">
+          <div className="stat-card">
 
-    <h2>99%</h2>
+            <h2>99%</h2>
 
-    <p>Customer Satisfaction</p>
+            <p>Customer Satisfaction</p>
 
-  </div>
+          </div>
 
-  <div className="about-stat-card">
+          <div className="stat-card">
 
-    <h2>100%</h2>
+            <h2>100%</h2>
 
-    <p>Clean Energy Focus</p>
+            <p>Clean Energy Focus</p>
 
-  </div>
+          </div>
 
-</div>
+        </div>
 
       </section>
 
