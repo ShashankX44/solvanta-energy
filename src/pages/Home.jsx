@@ -3,34 +3,37 @@ import "../App.css";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import Stats from "../components/Stats";
-import Services from "../components/Services";
 import WhyChoose from "../components/WhyChoose";
 import ProjectsPreview from "../components/ProjectsPreview";
 import CTA from "../components/CTA";
 import Footer from "../components/Footer";
 import WhatsAppButton from "../components/WhatsAppButton";
+
 function Home() {
   return (
-    <div className="hero">
+    <>
 
-      <Navbar />
+      <div className="hero">
 
-      <Hero />
+        <Navbar />
 
-      <Stats />
+        <Hero />
 
-      
+        <Stats />
 
-      <WhyChoose />
+        <WhyChoose />
 
-      <ProjectsPreview />
+        <ProjectsPreview />
 
-      <CTA />
-      <WhatsAppButton />
+        <CTA />
+
+        <WhatsAppButton />
+
+      </div>
 
       <Footer />
 
-    </div>
+    </>
   );
 }
 
